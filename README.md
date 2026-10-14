@@ -7,6 +7,7 @@
 | 位置 | 内容 |
 |---|---|
 | `art/` | 状态栏背景图：苦情巨树 |
+| `body/` | 正文四主题顶部插画、月红无字横幅和通用战斗插画 |
 | `music/` | 配乐：人间白首、梦回还、若当来世（点「开始建档」后由状态栏播放） |
 | `video/` | 开局页选篇视频（9 篇，重新封装过：索引在文件头、去掉了音轨） |
 | `poster/` | 选篇视频的封面帧 `<篇>.jpg` 与选篇卡缩略图 `<篇>-thumb.jpg` |
@@ -35,3 +36,23 @@ https://testingcf.jsdelivr.net/gh/1798547983tt/huyao-xiaohongniang@main/art
 ```text
 https://purge.jsdelivr.net/gh/1798547983tt/huyao-xiaohongniang@main/art/kuqing-night.webp
 ```
+
+## body：正文美化图片
+
+用于角色卡「狐妖楼层」脚本的四主题正文阅读界面。图片保持现有像素内容，以 WebP 存放。
+
+| 文件 | 用于 |
+|---|---|
+| `manga-chapter.webp` | 漫画主题顶部插画 |
+| `moonred-banner.webp` | 月红主题无字横幅 |
+| `battle-generic.webp` | 通用交锋与术法插画 |
+| `gilded-chapter.webp` | 金阙主题顶部插画 |
+| `tushan-chapter.webp` | 涂山主题顶部插画 |
+
+正文脚本应使用固定提交 SHA 的资源链接，例如：
+
+```text
+https://testingcf.jsdelivr.net/gh/1798547983tt/huyao-xiaohongniang@<commit-sha>/body/moonred-banner.webp
+```
+
+更新图片后，在新版角色卡中同步更新固定提交号；已有角色卡继续使用原来的版本。本目录不改变开局视频、状态栏背景或配乐资源。
